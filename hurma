@@ -1,0 +1,529 @@
+# def tt():
+#     s = '5'*400
+#     c = 0
+#     while'555' in s or '333' in s:
+#         if '555' in s:
+#             s.replace('555', '3', 1)
+#             c+=3
+#         else:
+#             s = s.replace('333', '3', 1)
+#     print(c)
+
+# def f(num):
+#     if num != 0:
+#         print(num, end=" ")
+#         f(num-1)
+#     if num == 0:
+#         return(1)
+#
+
+#
+# data = input()
+# str_max = 1 # максимальная длина строки
+# str_curr = 1 # длина текущей строки
+# for i in range(len(data) - 1):
+#     if data[i] == data[i + 1] == 'J':
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+# print(str_max)
+#
+
+# data = input()
+# str_max = 0
+# str_curr = 0
+# for i in range(len(data)):
+#     if data[i] == 'X' and str_curr % 3 == 0 or \
+#             data[i] == 'Y' and str_curr % 3 == 1 or \
+#             data[i] == 'Z' and str_curr % 3 == 2:
+#         str_curr += 1
+#         str_max = max(str_max, str_curr)
+# else:
+#     str_curr = 0
+# print(str_max)
+
+
+
+
+# data = input()
+# str_max = 1 # максимальная длина строки
+# str_curr = 1 # длина текущей строки
+# for i in range(len(data) - 1):
+#     if data[i] == data[i + 1] == 'J':
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#
+# print(str_curr)
+
+# data = input()
+# a = 1
+# c = 1
+# for i in range(len(data) - 1):
+#     if data[i] == data[i+1]:
+#        c += 1
+#        a = max(a, c)
+#     else:
+#        c = 1
+# print(a)
+#
+
+# data = input()
+# str_max = 0
+# str_curr = 0
+# for i in range(len(data)-1):
+#     if data[i] == ('A' or data[i] == 'C' or data[i] == 'D') and (data[i+1] == 'A' or data[i+1] == 'C' or data[i+1]):
+#         str_curr += 1
+#         str_max = max(str_max, str_curr)
+# else:
+#     str_curr = 0
+# print(str_max)
+
+# data = input()
+# str_max = 1 # максимальная длина строки
+# str_curr = 1 # длина текущей строки
+# for i in range(len(data) - 1):
+#     if data[i] == data[i + 1] == 'J':
+#         str_curr += 1
+#         str_max = min(str_curr, str_max)
+#     else:
+#         str_curr = 1
+
+# data = input()
+# str_min = 0
+# str_curr = 0
+#
+#
+# for i in range(len(data)):
+#     if data[i] == 'J':
+#         str_curr += 1
+#     else:
+#         if str_min == 0 and str_curr > 0:
+#             str_min = str_curr
+#
+#         if str_curr != 0 and (str_curr < str_min):
+#             str_min = str_curr
+#             str_curr = 0
+#
+# if str_curr != 0 and (str_curr < str_min):
+#     str_min = str_curr
+#     str_curr = 0
+#
+# print(str_min)
+
+#
+# data = input()
+# str_max = 0
+# str_curr = 0
+# for i in range(len(data)):
+#     if data[i] == 'A' and str_curr % 3 == 0 or \
+#             data[i].isalpha() and str_curr % 3 == 1 or \
+#             data[i] == 'R' and str_curr % 3 == 2:
+#         str_curr += 1
+#         str_max = max(str_max, str_curr)
+#     else:
+#         str_curr = 0
+# print(str_max)
+
+
+# data = input()
+# str_min = len(data)+1
+# str_curr = 1
+# for i in range(len(data) - 1):
+#     if data[i] == data[i + 1] == 'J':
+#         str_curr += 1
+#     else:
+#         if str_curr != 1:
+#             str_min = min(str_curr, str_min)
+#         str_curr = 1
+# if str_curr != 1:
+#     str_min = min(str_curr, str_min)
+# if str_min == len(data)+1:
+#     str_min = 1
+# print(str_min)
+
+
+# if data[i] == 'A' and str_curr % 3 == 0 or \
+# data[i] == 'B' and str_curr % 3 == 1 or \
+# data[i] == 'E' and str_curr % 3 == 2 or \
+# data[i] == 'F' and str_curr % 3 == 3:
+
+
+
+# data = input()
+# str_max = 1
+# str_curr = 1
+# for i in range(len(data)):
+#     if data[i] != 'D':
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+#
+# print(str_curr)
+
+
+
+#
+# data = input()
+# str_max = 0
+# str_curr = 0
+# for i in range(len(data)-1):
+#     if (data[i] in "ABEF") and (data[i+1] in "ABEF"):
+#         str_curr += 1
+#     else:
+#         str_max = max(str_max, str_curr)
+#         str_curr = 1
+# print(str_max)
+
+
+# data = input()
+# str_max = 1
+# str_curr = 1
+# for i in range(len(data) - 1):
+#     if data[i].isalpha() == data[i + 1].isalpha():
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+# print(str_max)
+
+# data = input()
+# str_max = 1
+# str_curr = 1
+# for i in range(len(data) - 1):
+#     if data[i] != data[i + 1] != "D":
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+# print(str_max)
+
+# data = input()
+# str_max = 1
+# str_curr = 1
+# for i in range(len(data) - 1):
+#     if data[i] != "D":
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+# print(str_max)
+
+# data = input()
+# str_max = 1
+# str_curr = 1
+# for i in range(len(data) - 1):
+#     if data[i].isalpha() == data[i + 1].isalpha() :
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+# print(str_max)
+
+
+
+#
+# data = input()
+# str_max = 1
+# str_curr = 1
+# for i in range(len(data) - 1):
+#     if data[i].isalpha() == data[i + 1].isalpha():
+#         str_curr += 1
+#         str_max = max(str_curr, str_max)
+#     else:
+#         str_curr = 1
+# print(str_max)
+
+
+# import re
+# data = input()
+# res = max(re.findall(r'[A-Za-z]+', data), key = len)
+# print(len(res))
+
+
+# s = '5'*400
+#
+# while '01' in s or '02':
+#     if '555' in s:
+#         s.replace('555', '3', 1)
+#     else:
+#         s = s.replace('333', '3', 1)
+# print(s)
+
+
+#
+# def f():
+#     while '01' in s or '02' in s or '03' in s:
+#         if '555' in s:
+#             s = s.replace('01', '30', 1)
+#             s = s.replace('02', '3103', 1)
+#             s = s.replace('03', '1201', 1)
+#     return s.count('1'), s.count('2'), s.count('3')
+#
+#
+# for j in range(1, 100):
+#     for i in range(1, 100):
+#         for q in range(1, 100):
+#             s = '0' + '1'*j + '2'*i + '3'*q
+#             if s.count('1') == 31 and s.count('2') == 24 and s.count('3') == 46:
+#                 print(s.count('3'))
+#                 break
+
+# def f():
+#     while '01' in s or '02' in s or '03' in s:
+#         if '555' in s:
+#             s = s.replace('01', '30', 1)
+#             s = s.replace('02', '101', 1)
+#             s = s.replace('03', '202', 1)
+#     return s.count('1'), s.count('2'), s.count('3')
+#
+#
+# for j in range(1, 100):
+#     for i in range(1, 100):
+#         for q in range(1, 100):
+#             s = '0' + '1'*j + '2'*i + '3'*q
+#             if s.count('1') == 20 and s.count('2') == 10 and s.count('3') == 70:
+#                 print(s.count('1')) #print(j)
+#                 break
+
+
+# for i in range(300, 100000):
+#     s = '8' * i
+#     while '555' in s or '888' in s:
+#         s = s.replace('555', '8', 1)
+#         s = s.replace('888', '55', 1)
+#     if (s.count('5') == 1) and (s.count('8') == 1):
+#         print(i)
+#         break
+
+# num = int(input())
+# base = 5
+#
+# newNum = ''
+#
+# while num > 0:
+#     newNum = str(num % base) + newNum
+#     num //= base
+#
+# c = newNum.count('0')
+# print(newNum)
+
+
+
+# for A in range(64):
+#     B = True
+#     for x in range(64):
+#         if ((x&51==0) or (x&41!=0) or (x&(63-A)==0))==0:
+#             B=False
+#     if B:
+#         print(63-A)
+#         break
+
+
+# def f(s):
+#     s = 3 * (s // 10)
+#     n = 1
+#     while s < 221:
+#         s = s + 13
+#         n = n * 2
+#     return n
+# c = 0
+# for s in range(900000000000000000):
+#     if f(s) == 256:
+#         c+=1
+#         print (c)
+
+#
+# x = 7*(512**120) - 6*(64**1000) + 8**210 - 255
+
+
+
+
+# def f(n):
+#     if n == 0:
+#         return 0
+#     if n > 0 and ((n % 3) == 2):
+#          a=f(n - 1) + 1
+#          return a
+#     if n > 0 and ((n % 3) < 2):
+#         a=f((n - (n % 3)) / 3)
+#         return a
+#     return n
+#
+#
+# for n in range(6, 900000000000):
+#     if f(n) == 6:
+#         print(n)
+#         break
+
+# ((x – 30 < A) ∧ (15 – y < A)) ∨ (x•(y+3) > 60)
+
+# def f(x, A):
+#     return ((x- 30 < A) and (15 - y < A) or (x*(y+3)>60))
+#
+# res = []
+# for A in range(1, 1000):
+#     flag = True
+#     for x in range(1, 1000):
+#         for y in range(1, 1000):
+#             if not f(x, A):
+#                 flag = False
+#                 break
+#             if not flag:
+#                 break
+#         if flag:
+#             res.append(A)
+#             break
+# print(res[0])
+
+
+
+# a = []
+#
+# n, x = map(int, input().split())
+#
+# l = (range(n, x + n))
+# print(*l)
+
+# c = int(input())
+#
+# a = [0]*c
+# for i in range(c):
+#     a[i] = 2**c
+#     c-=1
+# print(*a)
+
+
+# a = list(map(int, input().split()))
+#
+# chet = 0
+# nechet = 0
+#
+# for i in a:
+#     if i % 2 == 0:
+#         chet +=1
+#     else:
+#         nechet +=1
+# print(chet, nechet)
+
+
+# a = list(map(int, input().split()))
+# i = -1
+# chet = 0
+# nechet = 0
+# while True:
+#     i+=1
+#     if a[i] % 2 == 0:
+#         chet +=1
+#         a.pop()
+#         if len(a) == 0:
+#             break
+#     else:
+#         nechet +=1
+#         a.pop()
+#         if len(a) == 0:
+#             break
+#
+# print(chet, nechet)
+
+
+
+
+
+# a = []
+#
+# n, x = map(int, input().split())
+#
+# l = reversed(range(n, x + n))
+# print(*l)
+
+
+# data = [int(x) for x in input.split()]
+
+# a = list(map(int, input().split()))
+# min = 133700000
+# n = len(a)
+# j1 = 0
+# j2 = 0
+# for j in range(n-1):
+#     if (a[j] + a[j+1]) <= min:
+#         j1 = j+1
+#         j2 = j+2
+#         min = a[j] + a[j+1]
+# print(j1, j2)
+
+
+
+#Программа должна вывести в порядке возрастания номера двух элементов массива, которые расположены ближе всех друг к другу на числовой оси.
+
+# a = list(map(int, input().split()))
+#
+# raz = 740756968
+# j1 = 0
+# j2 = 0
+# for i in range(len(a)-1):
+#     for j in range(len(a)-1):
+#         if (a[j] - a[j+i]) <= raz:
+#             j1 = j+1
+#             j2 = j+2
+# print(j1, j2)
+#657676
+
+
+# a = list(map(int, input().split()))
+#
+# max = -133700000
+# n = len(a)
+# c = 0
+# for i in range(n-1):
+#     for j in range(i+1, n):
+#         if (a[i] - a[j]) % 2 == 0 and (a[i]% 17 == 0 or a[j]%17 == 0):
+#             if (a[i] + a[j]) > max:
+#                 max = a[i] + a[j]
+# if max == -133700000:
+#     max = 0
+#
+# print(max)
+
+
+# a = list(map(int, input().split()))
+# min = 133700000
+# n = len(a)
+# k = 0
+# max_sum = -3000000000
+# summ = 0
+#
+# for j in range(len(a)-1):
+#     summ += a[j]
+#
+# srednee = summ // len(a)
+#
+# for j in range(n-1):
+#     if (a[j]%10 + a[j+1]%10) == 7:
+#         k+=1
+#
+#     if (a[j] < srednee and a[j+1] < srednee) and (a[j] + a[j+1]) >= max_sum:
+#         max_sum = a[j] + a[j+1]
+#
+# print(k, max_sum)
+
+
+
+
+#
+# a = list(map(int, input().split()))
+# d = len(a)
+# sredn = sum(a) / len(a)
+# k = 0
+# max = -3**19
+# for i in range(d-2):
+#     if (a[i] < sredn or a[i+2] < sredn  or a[i+1] < sredn) and (a[i]%3 == 0 or a[i+2]%3 == 0 or a[i+1]%3 == 0):
+#         k+=1
+#         if(a[i]+ a[i+2] + a[i+1])> max:
+#             max = a[i]+ a[i+2] + a[i+1]
+# print (k, max)
+
+
+
+
