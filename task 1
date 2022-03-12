@@ -1,0 +1,15 @@
+data = list(map(int, input().split()))
+n = len(data)
+sum35 = 0
+
+for i in range(n):
+    if data[i] % 35 == 0:
+        sum35 += sum([int(x) for x in str(data[i])])
+
+k = 0
+min_sum = 10000 * n
+for i in range (n-1):
+    if (data[i] > sum35 and data[i+1] <= sum35 and hex(data[i+1])[-2:] == 'ef') or (data[i+1] > sum35 and data[i] <= sum35 and  hex(data[i])[-2:] == 'ef'):
+        k+=1
+        min_sum = min(min_sum, data[i] + data[i+1])
+print(k, min_sum)
