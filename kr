@@ -13,8 +13,19 @@
 #                    print(x, y, w, z)
 
 
+#4
+# основание 9, сколько 8?
+#
+# s = 81**15 + 3**22 - 27
+# c = 0
+# while s> 0:
+#    if s% 9 == 8:
+#       c +=1
+#    s = s//9
+# print(c)
 
-# 5
+
+#5
 # from itertools import permutations
 #
 # def f(x):
@@ -29,8 +40,21 @@
 #        k += 1
 # print(k)
 
+#6
+# def f(s):
+#     n = 1
+#     while s < 28:
+#       s = s + 5
+#       n = n * 3
+#     return n
+#
+# for i in range (100000):
+#     s = f(i)
+#     if s == 81:
+#         print(i)
 
-# 8
+
+#8
 # from itertools import product
 # s = '0123456789ABCDEF'
 #
@@ -59,16 +83,25 @@
 # print(s)
 
 
-#4
-# основание 9, сколько 8?
+#16
+# def F(n):
+#    if n > 3:
+#       n = F(n-3)*n
+#    return n
 #
-# s = 81**15 + 3**22 - 27
-# c = 0
-# while s> 0:
-#    if s% 9 == 8:
-#       c +=1
-#    s = s//9
-# print(c)
+# print(F(10))
+
+
+#17
+# count = m = 0
+# with open('17,1.txt') as f:
+#    l = [int(i) for i in f]
+#    for i in range(len(l) - 1):
+#        for j in range(i + 1, len(l)):
+#            if (l[i] - l[j]) % 60 == 0:
+#                count += 1
+#                m = max(m, abs(l[i] - l[j]))
+#    print(count, m)
 
 
 #22 (ил 6, на всякий. эта хурма не работает, чисто как пример)
@@ -84,23 +117,68 @@
 #    if a == 1 and b == 7:
 #       print(i)
 
-#17
-# count = m = 0
-# with open('17,1.txt') as f:
-#    l = [int(i) for i in f]
-#    for i in range(len(l) - 1):
-#        for j in range(i + 1, len(l)):
-#            if (l[i] - l[j]) % 60 == 0:
-#                count += 1
-#                m = max(m, abs(l[i] - l[j]))
-#    print(count, m)
 
 
 
-#16
-# def F(n):
-#    if n > 3:
-#       n = F(n-3)*n
-#    return n
-# 
-# print(F(10))
+#15
+# Для какого наименьшего неотрицательного целого числа А формула
+# x & 29 ≠ 0 → (x & 17 = 0 → x & А ≠ 0)
+# тождественно истинна (т.е. принимает значение 1 при любом неотрицательном целом значении переменной x)?
+#
+# def f(x, A):
+#    return (x & 29 != 0) <= ((x & 17 == 0) <= (x & A != 0))
+# for A in range(0, 101):
+#    flag = True
+#    for x in range(0, 101):
+#        if not f(x, A):
+#            flag = False
+#    if flag:
+#        print(A)
+#        break
+
+# Сколько существует целых значений числа A, при которых формула
+# ((x < A) → (x2 < 100)) ∧ ((y2 ≤ 64) → (y ≤ A))
+# тождественно истинна при любых целых неотрицательных x и y?
+#
+# def f(x, y, A):
+#    return ((x < A) <= (x**2 < 100)) and ((y**2 <= 64) <= (y <= A))
+#
+# res =[]
+# for A in range(0, 101):
+#    flag = True
+#    for x in range(0, 101):
+#        for y in range(0, 101):
+#            if not f(x, y, A):
+#                flag = False
+#                break
+#        if not flag:
+#            break
+#    if flag:
+#        res.append(A)
+# print(len(res))
+
+# Для какого наибольшего натурального числа А формула
+# (A < 50) ∧ (¬ДЕЛ(x, А) → (ДЕЛ(x, 10) → ¬ДЕЛ(x, 18)))
+# тождественно истинна (то есть принимает значение 1 при любом натуральном значении переменной x)?
+#
+# def f(x, A):
+#    return (A < 50) and ((x % A != 0) <= ((x % 10 == 0) <= (x % 18 != 0)))
+#
+# res =[]
+# for A in range(1, 101):
+#    flag = True
+#    for x in range(1, 101):
+#        if not f(x, A):
+#            flag = False
+#            break
+#    if flag:
+#        res.append(A)
+# print(res[-1])
+
+# f = open("17,1.txt")
+# data = list(map(int, f.read().split()))
+# l = [int(i) for i in f]
+# f.close()
+# print(l)
+
+
