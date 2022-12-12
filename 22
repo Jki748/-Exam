@@ -1,0 +1,24 @@
+f = open("22-28.csv")
+data = f.readlines()[1:] #отрезаем заголовки
+final_time = {}
+data_source = {}
+for i in data:
+   st = i.strip().split(',') # режем строку на три части по запятым
+   id_pr, time_pr = int(st[0]), int(st[1])
+   depends = [int(x) for x in st[2].split(';')] # режем номера зависимых процессов по точке с запятой
+   # если в зависимых процессах 0, то процесс ни от кого не зависит, иначе складываем данные в словарь
+   if depends == [0]:
+       final_time[id_pr] = time_pr
+   else:
+       data_source[id_pr] = (time_pr, depends)
+# перебираем словарь до тех пор, пока в нем есть элементы.
+# Если удалось посчитать максимальное время процесса, удаляем процесс из словаря
+while data_source:
+   keys = list(data_source.keys())
+   for i in keys:
+       time_pr, depends = data_source[i]
+       if all((x in final_time) for x in depends):
+           max_time = max([final_time[x] for x in depends])
+           final_time[i] = time_pr + max_time
+           del data_source[i]
+print(max(final_time.values()))
