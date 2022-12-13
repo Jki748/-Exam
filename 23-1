@@ -1,0 +1,12 @@
+def numProg(start, finish, op=''):
+   if start > finish:
+       return 0
+   if finish == start:
+       return 1
+   if op == '*':
+       n = numProg(start + 1, finish) + numProg(start + 2, finish)
+   else:
+       n = numProg(start + 1, finish) + numProg(start + 2, finish) + numProg(start * 2, finish, '*')
+   return n
+
+print(numProg(1, 11))
