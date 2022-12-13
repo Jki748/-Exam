@@ -1,0 +1,11 @@
+res = set()
+def numProga(start):
+   if start > 98:
+       return 0
+   numProga(start * 3)
+   numProga(start + 3)
+   if 0 < start < 100 and start % 2 == 0:
+       res.add(start)
+       return start
+numProga(3)
+print(len(res))
